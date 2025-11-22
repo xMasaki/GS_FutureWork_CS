@@ -1,0 +1,22 @@
+﻿<Window x:Class="GS1_Future_Work.ColaboradowWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GS1_Future_Work"
+        mc:Ignorable="d"
+        Title="ColaboradowWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock Text="WorkFuture - Colaborador" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" />
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="270" Margin="0,70,0,0" VerticalAlignment="Top" Width="650">
+            <DataGrid x:Name="DataCursos" AutoGenerateColumns="False" IsReadOnly="True" CanUserResizeRows="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Curso" Binding="{Binding Titulo}" Width="*"/>
+                    <DataGridTextColumn Header="Professor" Binding="{Binding Professor}" Width="200"/>
+                    <DataGridTextColumn Header="Duração" Binding="{Binding Duracao}" Width="120"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+        <Button Content="Sair" HorizontalAlignment="Center" Margin="0,360,0,0" VerticalAlignment="Top" Height="50" Width="147" Click="Button_Sair"/>
+    </Grid>
+</Window>
